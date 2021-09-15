@@ -3,8 +3,7 @@
         <h1> {{'employee.title' | translate}}</h1> 
           <div class="d-flex">
             <button class="btn btn-danger" (click)="logout()">{{'employee.logout' | translate}}</button>&nbsp;
-            <button (click) = "clickAddEmployee()" class="btn btn-success" type="button" data-toggle="modal" data-target="#exampleModal">{{'employee.addEmp' | translate}}</button>&nbsp;&nbsp;
-           
+            <button (click) = "clickAddEmployee()" class="btn btn-success" type="button" data-toggle="modal" data-target="#exampleModal">{{'employee.addEmp' | translate}}</button>&nbsp;&nbsp;           
           </div>
           <div class="row">        
             <select #lang class="custom-select" (change)="changeLang(lang.value)" >

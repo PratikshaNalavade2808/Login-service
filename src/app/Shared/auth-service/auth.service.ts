@@ -22,8 +22,7 @@ export class AuthService {
   constructor(private http: HttpClient
     ) {
     this.loadUserInfo();
-    this.currentUser = this.userInfo.asObservable();
-    
+    this.currentUser = this.userInfo.asObservable();    
    }
 
 

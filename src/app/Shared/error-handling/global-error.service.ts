@@ -7,7 +7,7 @@ import { throwError } from 'rxjs';
 })
 export class GlobalErrorService {
 
-    constructor() { }
+    constructor() {}
 
   handleError(error: any) {
     let errorMessage = '';

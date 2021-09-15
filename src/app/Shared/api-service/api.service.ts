@@ -42,5 +42,4 @@ export class ApiService {
     catchError(this.errorHandlerService.handleError)
     )
   }
-
 }

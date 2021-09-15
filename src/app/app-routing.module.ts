@@ -4,7 +4,6 @@ import { EmployeeDasboardComponent } from './employee-dasboard/employee-dasboard
 import { LoginComponent } from './Login/login.component';
 import { AuthRouteGuard } from './Shared/auth.route.guard';
 
-
 const routes: Routes = [
   { path: '', redirectTo:'login', pathMatch: 'full'},
   { path:'login', component: LoginComponent, canActivate: [AuthRouteGuard]},

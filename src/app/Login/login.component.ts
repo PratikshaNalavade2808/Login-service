@@ -59,10 +59,8 @@ export class LoginComponent implements OnInit {
           alert("user failed...Invalid Ceditenials");
           this.route.navigate(['/login']);
           this.formValue.reset();
-        }
-         
+        }         
     });
  }
-
  
 }

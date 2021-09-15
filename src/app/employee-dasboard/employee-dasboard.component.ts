@@ -65,7 +65,6 @@ export class EmployeeDasboardComponent implements OnInit{
       mobile: new FormControl('',[Validators.required,Validators.minLength(6)])
     })
     
-
     this.translate.onLangChange.subscribe(() => {
 
     })

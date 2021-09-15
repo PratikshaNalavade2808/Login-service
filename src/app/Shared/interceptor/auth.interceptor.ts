@@ -8,6 +8,7 @@ import { AuthService } from '../auth-service/auth.service';
 export class AuthInterceptor implements HttpInterceptor {
     constructor(private authService : AuthService) {}
     intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
+        
         var userData = this.authService.userInfo.getValue();
         
         if(userData && userData.userid) {

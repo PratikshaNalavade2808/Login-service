@@ -15,7 +15,7 @@ export class customPaginator extends MatPaginatorIntl {
     }
 
     getAndInitTranslation () {
-        this.itemsPerPageLabel = this.translate.instant('employee.ItemPerPage')
+        this.itemsPerPageLabel = this.translate.instant('employee.ItemPerPage');
         this.changes.next();
     }
 

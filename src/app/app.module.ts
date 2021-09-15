@@ -30,7 +30,6 @@ import { TranslateLoader, TranslateModule, TranslateService } from '@ngx-transla
 import { MatSortModule } from '@angular/material/sort';
 import { customPaginator } from '../app/employee-dasboard/spanish-paginator-intl';
 
-
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http,'./assets/lang/','.json');
 }

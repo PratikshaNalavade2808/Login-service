@@ -8,7 +8,7 @@ describe('GlobalErrorService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({});
     service = TestBed.inject(GlobalErrorService);
-  });
+  }); 
 
   it('should be created', () => {
     expect(service).toBeTruthy();

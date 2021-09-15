@@ -13,8 +13,7 @@ export class AuthRouteGuard implements CanActivate {
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | 
-    Promise<boolean | UrlTree> | boolean | UrlTree {
-    
+    Promise<boolean | UrlTree> | boolean | UrlTree {    
     const userData = this.authService.userInfo.getValue();
 
      if(userData && userData.userid) {
