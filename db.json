@@ -1,0 +1,49 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "firstName": "John",
+      "lastName": "paul",
+      "email": "john@gmail.com",
+      "mobile": 1234455768
+    },
+    {
+      "id": 2,
+      "firstName": "perry",
+      "lastName": "jen",
+      "email": "perry@gmail.com",
+      "mobile": 12334567
+    },
+    {
+      "id": 3,
+      "firstName": "Tom",
+      "lastName": "Cruise",
+      "email": "tom@gmail.com",
+      "mobile": 1234567
+    },
+    {
+      "id": 4,
+      "firstName": "perry",
+      "lastName": "den",
+      "email": "perry@gmail.com",
+      "mobile": 123456789
+    },
+    {
+      "firstName": "Jessy",
+      "lastName": "hen",
+      "email": "jessy@gmail.com",
+      "mobile": 123456789,
+      "id": 5
+    },
+    {
+      "firstName": "jen",
+      "lastName": "den",
+      "email": "jen@gmail.com",
+      "mobile": 224235345,
+      "id": 6
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

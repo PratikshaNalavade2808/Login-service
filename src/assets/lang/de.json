@@ -1,0 +1,22 @@
+
+{
+    "employee":{
+    "title":"Angular CRUD",
+    "logout":"Cerrar sesión",
+    "addEmp":"Empleado de ADD",
+    "EmployeeID": "ID de empleado",
+    "firstName": "Nombre",
+    "lastName": "Apellido",
+    "mob": "Mob No.",
+    "emailid":"ID de correo electrónico",
+    "action": "Acción",
+    "edit": "EDITAR",
+    "delete": "BORRAR",
+    "close": "Cerrar",
+    "add":"Agregar",
+    "update":"Actualizar",
+    "EmployeeDetails": "Detalles del empleado",
+    "ItemPerPage": "Items per pagina:"
+
+}
+}
