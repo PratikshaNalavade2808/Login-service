@@ -14,9 +14,7 @@ export class AuthService {
   jwtHelper = new JwtHelperService();
   public currentUser = this.userInfo.asObservable();
   isUserLoggedIn: boolean = false;
-  userEmail: any;
-  userPassword: any;
- userList: Array<User> = []
+  userList: Array<User> = []
   userObject: User =new User();
 
   constructor(private http: HttpClient

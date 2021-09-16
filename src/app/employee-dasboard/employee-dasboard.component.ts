@@ -123,9 +123,8 @@ export class EmployeeDasboardComponent implements OnInit{
 
     dialogRef.afterClosed().subscribe(result => {
       if(result === true) {
-        this.api.deleteEmployee(row.id).subscribe(res=>{
-         
-         })
+        this.dataSource.filteredData.splice(this.dataSource.filteredData.indexOf(row,1));
+	this.dataSource = new MatTableDataSource<EmployeeModel>(this.dataSource.filteredData);
       }
      
     });
