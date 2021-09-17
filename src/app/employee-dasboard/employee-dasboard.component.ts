@@ -1,12 +1,12 @@
 import { AfterViewInit, Component, OnInit, ViewChild} from '@angular/core';
 import { FormBuilder, FormGroup,Validators,FormControl } from '@angular/forms';
 import { ApiService } from '../Shared/api-service/api.service';
-import { EmployeeModel } from './employee-dashboard.model';
-import {MatTableDataSource} from '@angular/material/table';
+import { EmployeeModel } from '../Shared/model/employee-dashboard.model';
+import { MatTableDataSource} from '@angular/material/table';
 import { DialogComponent } from '../Shared/Dialog/dialog.component';
 import { MatDialog } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import {MatPaginator} from '@angular/material/paginator';
+import { MatPaginator} from '@angular/material/paginator';
 import { AuthService } from '../Shared/auth-service/auth.service';
 import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
@@ -20,10 +20,10 @@ import { MatSort } from '@angular/material/sort';
 })
 export class EmployeeDasboardComponent implements OnInit{
   
-  formValue !: FormGroup;
+  formValue : FormGroup;
   employeeModelObject: EmployeeModel =new EmployeeModel();
-  employeeData !:any;
-  showAdd !:boolean;
+  employeeData :any;
+  showAdd :boolean;
   showUpdate !:boolean;
   todos = [];
   displayedColumns: string[] = ['id', 'firstName', 'lastName', 'email','mobile','action'];

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../Shared/auth-service/auth.service';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup,FormControl,Validators } from '@angular/forms';
-import { User } from './login.model';
+import { User } from '../Shared/model/login.model';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ApiService } from '../Shared/api-service/api.service';
 
@@ -12,20 +12,14 @@ import { ApiService } from '../Shared/api-service/api.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  formValue !: FormGroup;
+  formValue : FormGroup;
   loginData = {
     email: '',
     password: ''
-  }
-  todos = [];
-  submitted = false;
-  hide = true;
-  userData : any;
-  userPassword : any;
+  };
   data:any = []
-  userModelObject: User =new User();
+  userModelObject: User = new User();
   successfulMessage:string = "Successfully Added the employee";
-  user: any = [];
  
 
   constructor(
@@ -40,10 +34,6 @@ export class LoginComponent implements OnInit {
     })  
      }  
   
-  get json() {
-    return JSON.stringify(this.formValue.value);
-  }
- 
 
   onClickSubmit(data: any) {
     this.userModelObject.email = data.email;
@@ -57,7 +47,6 @@ export class LoginComponent implements OnInit {
           this.route.navigate(['/register']); 
          } else {
           alert("user failed...Invalid Ceditenials");
-          this.route.navigate(['/login']);
           this.formValue.reset();
         }         
     });
