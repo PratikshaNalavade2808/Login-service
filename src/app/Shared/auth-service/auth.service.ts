@@ -3,7 +3,7 @@ import { BehaviorSubject,Observable, of } from 'rxjs';
 import { JwtHelperService } from '@auth0/angular-jwt';
 import { HttpClient, HttpResponse } from '@angular/common/http';
 import {  delay,  map,  tap } from 'rxjs/operators';
-import { User } from '../../Login/login.model';
+import { User } from '../model/login.model';
 
 @Injectable({
   providedIn: 'root'
