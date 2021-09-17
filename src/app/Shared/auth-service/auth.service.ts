@@ -1,9 +1,10 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject,Observable, of } from 'rxjs';
 import { JwtHelperService } from '@auth0/angular-jwt';
-import { HttpClient, HttpResponse } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import {  delay,  map,  tap } from 'rxjs/operators';
 import { User } from '../model/login.model';
+import { baseUrl,accesstoken,refreshtoken   } from '../constant/constant';
 
 @Injectable({
   providedIn: 'root'
@@ -14,8 +15,8 @@ export class AuthService {
   jwtHelper = new JwtHelperService();
   public currentUser = this.userInfo.asObservable();
   isUserLoggedIn: boolean = false;
-  userList: Array<User> = []
-  userObject: User =new User();
+  userList: Array<User> = [];
+  userObject: User = new User();
 
   constructor(private http: HttpClient
     ) {
@@ -25,7 +26,7 @@ export class AuthService {
 
 
    getEmployee():Observable<User[]> {
-    return this.http.get<User[]>("http://localhost:3001/login/").pipe(map(
+    return this.http.get<User[]>(`${baseUrl}`).pipe(map(
       (data) => {
       return data;
       }
@@ -72,9 +73,7 @@ export class AuthService {
     }
 
     userLogin(){
-      const accesstoken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c";
-    const refreshtoken = "dummy";
-
+    
     localStorage.setItem("access_token",accesstoken);
     localStorage.setItem("refresh_token",refreshtoken);
 
