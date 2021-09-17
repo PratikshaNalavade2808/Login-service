@@ -4,7 +4,7 @@ import { JwtHelperService } from '@auth0/angular-jwt';
 import { HttpClient } from '@angular/common/http';
 import {  delay,  map,  tap } from 'rxjs/operators';
 import { User } from '../model/login.model';
-import { baseUrl,accesstoken,refreshtoken   } from '../constant/constant';
+import { baseUrl,accesstoken,refreshtoken } from '../constant/constant';
 
 @Injectable({
   providedIn: 'root'

@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { catchError, map } from 'rxjs/operators';
 import { GlobalErrorService } from '../error-handling/global-error.service';
+import { userUrl } from '../constant/constant';
 
 @Injectable({
   providedIn: 'root'
